@@ -1,0 +1,38 @@
+.cards {
+   display: flex;
+   gap: 0.75rem;
+}
+.cards__card {
+   position: relative;
+}
+
+.cards__img {
+   width: 100%;
+   height: 200px;
+}
+
+.cards__p {
+   background-color: white;
+   text-transform: uppercase;
+   padding: 0.3rem 0.4rem;
+   border-radius: 3px;
+   font-size: small;
+   position: absolute;
+   top: 10px;
+   left: 10px;
+}
+
+.cards__caption{
+   font-size: 11px;
+}
+
+.cards__caption > p {
+   padding: 0.2rem 0;
+}
+.cards__span-fade {
+   color: rgba(0, 0, 0, 0.359);
+}
+
+.cards__span-bold {
+   font-weight: bold;
+}
