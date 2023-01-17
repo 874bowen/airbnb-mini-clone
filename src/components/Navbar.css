@@ -1,0 +1,17 @@
+.header {
+   height: 60px;
+   box-shadow: 0 6px 10px -5px #333;
+}
+
+.header__nav{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 0.25rem;
+   padding: 0.75rem 1rem 0.5rem 1rem;
+}
+
+.header__p {
+   color: #FA5B62;
+   font-weight: bold;
+}
