@@ -1,0 +1,19 @@
+.hero {
+   padding: 2rem;
+}
+
+.hero__img-div {
+   display: flex;
+   justify-content: end;
+}
+
+.hero__img {
+   max-width: 100%;
+   padding: 1rem 1rem 1rem 2rem;
+}
+
+.hero__p {
+   width: 80%;
+   font-size: medium;
+   padding: 1rem 0 2rem 0;
+}
