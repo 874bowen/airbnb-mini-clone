@@ -3,26 +3,22 @@ import "./App.css"
 import Card from "./components/Card";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import wedPic from "./assets/wedding.png";
-import bike from "./assets/mountain-bike.png";
-import swim from "./assets/image-12.png";
+import { data } from "./data"
 
 function App() {
-	const values = [1, 3, 4, 5, 7];
-	const squareVals = values.map(x => x ** x);
-	console.log(squareVals);
-
-	const strs = ["alice", "bob", "charles", "dee", "eileen"]
-
-	const capitalizedStrs = strs.map((str) => {
-		let val = str.charAt(0).toUpperCase();
-		let rest = str.slice(1);
-		return val +rest
+	
+	const cardData = data.map((d) => {
+		return (
+		<Card
+			key={d.id}
+			img={d.coverImg} 
+			rating={d.stats.rating} 
+			reviewCount={d.stats.reviewCount} country={d.location} 
+			title={d.title} 
+			price={d.price} 
+		/>
+		)
 	})
-
-	console.log(capitalizedStrs);
-	
-	
 	
 	
 	return (
@@ -30,8 +26,7 @@ function App() {
 			<Navbar />
 			<Hero />
 			<section className="cards">
-				<Card img={swim} rating="5.0" reviewCount={6} country="USA" title="Life lessons with Katie Zeferes" price={136} />
-				
+				{cardData}
 			</section>
 		</div>
 	);
