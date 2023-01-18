@@ -12,7 +12,8 @@ type Card = {
 	stats: Stats,
 	location: string,
 	title: string,
-	price: number
+	price: number,
+	openSpots: number
 }
 
 type Prop = {
@@ -20,12 +21,15 @@ type Prop = {
 	item: Card
 }
 const Card = (props: Prop) => {
-	console.log(props);
+	let cardText;
+
+	if (props.item.openSpots === 0) cardText = "sold out";
+	else if (props.item.location === "Online") cardText = "Online"
 	
 	return (
 			<div className="cards__card">
 				<img className="cards__img" src={`/src/assets/${props.item.coverImg}`} alt="" />
-				<p className="cards__p">sold out</p>
+				{cardText && <p className="cards__p">{cardText}</p>}
 				<div className="cards__caption">
 					<p>
 						⭐{props.item.stats.rating}<span className="cards__span-fade">({props.item.stats.reviewCount}).{props.item.location}</span>
