@@ -1,4 +1,4 @@
-type Stat = {
+type Stats = {
     rating: number,
     reviewCount: number
 }
@@ -9,7 +9,7 @@ type Card = {
     description: string,
     price: number,
     coverImg: any,
-    stats: Stat,
+    stats: Stats,
     location: string,
     openSpots: number
 }

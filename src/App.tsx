@@ -11,11 +11,7 @@ function App() {
 		return (
 		<Card
 			key={d.id}
-			img={d.coverImg} 
-			rating={d.stats.rating} 
-			reviewCount={d.stats.reviewCount} country={d.location} 
-			title={d.title} 
-			price={d.price} 
+			item={d}
 		/>
 		)
 	})
